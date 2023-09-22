@@ -33,12 +33,12 @@
 
         // Animate wrapper fade in
         gsap.to(wrapperEl.value, {
-            duration: 0.5,
+            duration: 0.2,
             autoAlpha: 1,
             onComplete: () => {
                 // Animate texts coming in from the left and fading in, one after the other
-                gsap.to(typeEl.value, { duration: 0.5, autoAlpha: 1, x: 0, delay: 0.2 });
-                gsap.to(meaningEl.value, { duration: 0.5, autoAlpha: 1, x: 0, delay: 0.7 });
+                gsap.to(typeEl.value, { duration: 0.2, autoAlpha: 1, x: 0, delay: 0.2 });
+                gsap.to(meaningEl.value, { duration: 0.2, autoAlpha: 1, x: 0, delay: 0.7 });
             }
         })
     })

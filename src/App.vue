@@ -10,7 +10,8 @@
 				v-for="(item, i) in morpheme" 
 				:key="item.morpheme"
 				:class="[
-					i === 0 ? 'capitalize morph' : ''
+					i === 0 ? 'capitalize' : '',
+					i < morpheme.length - 1 ? 'morph' : ''
 				]"
 			>
 				{{ item.morpheme }}
@@ -50,9 +51,15 @@ export default {
 					"_id": "6507caa5ca67865ab4db453b"
 				},
 				{
-					"morpheme": "tory",
+					"morpheme": "tor",
 					"type": "suffix",
 					"meaning": "state or condition of",
+					"_id": "6507caa5ca67865ab4db453c"
+				},
+				{
+					"morpheme": "ious",
+					"type": "preffix",
+					"meaning": "some random meaning",
 					"_id": "6507caa5ca67865ab4db453c"
 				}
 			],
