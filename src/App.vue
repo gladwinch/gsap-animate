@@ -22,8 +22,8 @@
 				> 
 					<div class="line-vertical liner"></div>
 					<div class="line-horizonal liner"></div>
-					<div  class="info-box" :class="[i % 2 !== 0 ? 'anti-flip': '']" v-if="showBox">
-						some value
+					<div :class="[i % 2 !== 0 ? 'anti-flip': '']" v-if="showBox">
+						<Card :data="item" :index="i" />
 					</div>
 				</div>
 			</div>
@@ -33,8 +33,13 @@
 
 <script>
 import gsap from 'gsap'
+import Card from './components/Card.vue'
+
 export default {
 	name: 'App',
+	components: {
+		Card
+	},	
 	data() {
 		return {
 			morpheme: [
@@ -144,6 +149,8 @@ export default {
 	.line-horizonal {
 		height: 1px;
 		width: 0;
+		display: flex;
+		align-items: right;
 	}
 
 	.info-box {
@@ -154,7 +161,7 @@ export default {
 		padding: .8rem;
 		position: absolute;
 		border-radius: 10px;
-		
+		top: 50px
 	}
 
 	.anti-flip {
